@@ -1,0 +1,3 @@
+# SmartFishTank
+仿小蚁摄像机风格的Android智能鱼缸控制App
+目前功能并不完善，定位使用的百度定位，天气API使用的和风天气
