@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <include layout="@layout/bar_simple_title" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:layout_marginTop="@dimen/magin_2dp"
+        >
+        <SurfaceView
+            android:id="@+id/video_view"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:layout_marginLeft="@dimen/magin_10dp"
+            android:layout_marginRight="@dimen/magin_10dp"
+            />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_wave_chart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.jjoe64.graphview.GraphView
+            android:id="@+id/graph_view"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_margin="@dimen/magin_10dp"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginTop="@dimen/magin_8dp"
+        >
+        <com.tfxiaozi.smartfishtank.widget.PowerFreqencyView
+            android:id="@+id/power_frequency_view"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_marginLeft="@dimen/magin_20dp"
+            android:layout_marginRight="@dimen/magin_20dp"
+            android:layout_centerInParent="true"
+            app:pfv_border_color = "#666666"
+            app:indicator_content_color="@color/titleBarBg"
+            />
+
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/magin_25dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/icon_wave_off"
+            android:layout_weight="1"
+            android:layout_marginLeft="-5dp"
+            />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/icon_wave_on"
+            android:layout_marginRight="-5dp"
+            android:layout_weight="1"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/magin_25dp"
+        android:gravity="center_vertical"
+        >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:gravity="center"
+            >
+
+            <TextView
+                android:id="@+id/tv_add"
+                android:layout_width="75dp"
+                android:layout_height="25dp"
+                android:text="@string/increase"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:background="@drawable/wave_mode_switch_inc_selector"
+                android:clickable="true"
+                />
+
+
+            <TextView
+                android:id="@+id/tv_mode_switch"
+                android:layout_width="75dp"
+                android:layout_height="25dp"
+                android:layout_marginTop="@dimen/magin_5dp"
+                android:scaleType="fitXY"
+                android:text="@string/power"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:background="@drawable/wave_mode_switch_selector"
+                android:clickable="true"
+                />
+
+            <TextView
+                android:id="@+id/tv_reduce"
+                android:layout_width="75dp"
+                android:layout_height="25dp"
+                android:scaleType="fitXY"
+                android:layout_marginTop="@dimen/magin_5dp"
+                android:text="@string/decrease"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:background="@drawable/wave_mode_switch_dec_selector"
+                android:clickable="true"
+                />
+
+        </LinearLayout>
+
+        <com.tfxiaozi.smartfishtank.widget.ImgTextButton
+            android:id="@+id/itb_fun_feed"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_weight="1"
+            />
+
+        <com.tfxiaozi.smartfishtank.widget.ImgTextButton
+            android:id="@+id/itb_fun_mode"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_weight="1"
+            />
+    </LinearLayout>
+
+</LinearLayout>

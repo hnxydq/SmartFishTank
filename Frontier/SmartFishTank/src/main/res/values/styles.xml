@@ -1,0 +1,44 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="style_RadioButton">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:button">@null</item>
+        <item name="android:background">@null</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:textColor">@drawable/main_tab_textcolor_selector</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:padding">2dp</item>
+    </style>
+    
+    <style name="style_PopupCamera">
+        <item name="android:windowEnterAnimation">@anim/camera_popup_in</item>
+        <item name="android:windowExitAnimation">@anim/camera_popup_out</item>
+    </style>
+
+    <style name="timming_item_et">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:inputType">number</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:imeOptions">actionDone</item>
+        <item name="android:focusableInTouchMode">true</item>
+        <item name="android:maxLength">3</item>
+        <item name="android:focusable">true</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+</resources>

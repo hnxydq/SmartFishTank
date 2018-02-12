@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <include android:id="@+id/bar_title" layout="@layout/bar_simple_title"/>
+
+    <RelativeLayout
+        android:id="@+id/rl_main_camera"
+        android:layout_below="@id/bar_title"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </RelativeLayout>
+</LinearLayout>

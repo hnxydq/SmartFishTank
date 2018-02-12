@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="none"
+    android:fillViewport="true"
+    android:background="#E8E8E8"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <include
+            android:id="@+id/layout_title"
+            layout="@layout/bar_simple_title" />
+
+        <LinearLayout
+            android:id="@+id/layout_district_temper"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:orientation="vertical"
+            android:layout_below="@id/layout_title"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_marginTop="25dp"
+                >
+                <ImageView
+                    android:id="@+id/locate"
+                    android:src="@mipmap/locate"
+                    android:layout_marginLeft="@dimen/magin_10dp"
+                    android:layout_centerVertical="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/city"
+                    android:layout_toRightOf="@id/locate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/text_size_18"
+                    android:layout_centerVertical="true"
+                    />
+
+                <ImageView
+                    android:id="@+id/weather_icon"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_marginLeft="@dimen/magin_10dp"
+                    />
+                <TextView
+                    android:id="@+id/tv_weather"
+                    android:layout_toRightOf="@id/weather_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:textSize="@dimen/text_size_18"
+                    android:layout_centerVertical="true"
+                    />
+
+                <TextView
+                    android:id="@+id/temperature"
+                    android:layout_toRightOf="@id/city"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:textSize="@dimen/text_size_18"
+                    android:layout_centerVertical="true"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_marginTop="20dp"
+                >
+
+                <ImageView
+                    android:id="@+id/water_temper_icon"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="@dimen/magin_10dp"
+                    android:layout_centerVertical="true"
+                    android:src="@mipmap/water_temper"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/water_temper_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/water_temper"
+                    android:textSize="@dimen/text_size_18"
+                    android:layout_toRightOf="@id/water_temper_icon"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="3dp"
+                    />
+
+                <TextView
+                    android:id="@+id/water_temper"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="20℃"
+                    android:textSize="@dimen/text_size_18"
+                    android:layout_toRightOf="@id/water_temper_title"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="4dp"
+                    android:clickable="true"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:id="@+id/line_separaotr_1"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/line_color"
+            android:layout_below="@id/layout_district_temper"
+            />
+
+        <LinearLayout
+            android:id="@+id/ll_led_state"
+            android:orientation="horizontal"
+            android:layout_below="@id/line_separaotr_1"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_gravity="center"
+            android:padding="5dp"
+            >
+
+            <ImageView
+                android:id="@+id/iv_pulse"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/magin_10dp"
+                android:layout_marginRight="@dimen/magin_10dp"
+                android:background="@mipmap/led_spectrum"
+                />
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/line_separaotr_2"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/line_color"
+            android:layout_below="@id/ll_led_state"
+            />
+
+        <LinearLayout
+            android:layout_below="@id/line_separaotr_2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginLeft="@dimen/magin_10dp"
+            android:layout_marginRight="@dimen/magin_10dp"
+            android:padding="8dp"
+            >
+            <Button
+                android:id="@+id/btn_manual_ip"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/manual_input_ip"
+                android:textColor="@color/white"
+                android:background="@drawable/btn_iv_selector"
+                android:layout_margin="@dimen/magin_5dp"
+                />
+
+            <Button
+                android:id="@+id/btn_auto_search"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/auto_search_device"
+                android:textColor="@color/white"
+                android:layout_margin="@dimen/magin_5dp"
+                android:background="@drawable/btn_iv_selector"
+                />
+            <View
+                android:id="@+id/line_separaotr_3"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="@dimen/magin_2dp"
+                android:background="@color/line_color"
+                android:layout_below="@id/btn_auto_search"
+                />
+
+            <com.tfxiaozi.smartfishtank.widget.MyListView
+                android:visibility="invisible"
+                android:id="@+id/lv_device_list"
+                android:layout_marginTop="@dimen/magin_2dp"
+                android:layout_width="match_parent"
+                android:layout_height="100dp">
+            </com.tfxiaozi.smartfishtank.widget.MyListView>
+
+        </LinearLayout>
+    </RelativeLayout>
+</ScrollView>
+
+

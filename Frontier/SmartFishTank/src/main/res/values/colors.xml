@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="titleBarBg">#049C8D</color>
+    <color name="bgColor">#F4F6F8</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="red">#FF0000</color>
+    <color name="tab_line_color">#DEDEDE</color>
+    <color name="label_subtitle_color">#B7B6B6</color>
+    <color name="label_title_color">#333333</color>
+    <color name="cloud_buy_bg">#FF00FF</color>
+    <color name="labellayout_subtitle_text_bg">#CBCACA</color>
+    <color name="line_color">#DFDFDF</color>
+    <color name="green">#6CE26C</color>
+    <color name="txt_bg">#fa097798</color>
+    <color name="yuexiang_bg">#e0000000</color>
+
+    <color name="t5_1">#f4c600</color>
+    <color name="t5_2">#ea8010</color>
+    <color name="t5_3">#eb4f38</color>
+</resources>

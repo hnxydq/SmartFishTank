@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <include layout="@layout/bar_simple_title" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:id="@+id/title_layout"
+        android:background="@color/titleBarBg"
+        android:layout_gravity="center_vertical"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <TextView
+            android:id="@+id/tv_current_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/current_time"
+            android:textColor="@color/white"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:gravity="center"
+            />
+
+
+        <ImageView
+            android:id="@+id/iv_setting"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginLeft="3dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_setting_selector"
+            android:layout_alignParentRight="true"
+            android:padding="5dp"
+            />
+
+
+        <TextView
+            android:id="@+id/factory"
+            android:layout_toLeftOf="@id/iv_setting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:text="@string/factory"
+            android:textSize="@dimen/text_size_12"
+            android:textColor="@color/white"
+            android:layout_centerVertical="true"
+            android:background="@drawable/btn_iv_selector"
+            android:clickable="true"
+            />
+
+        <TextView
+            android:id="@+id/btn_custom"
+            android:layout_toLeftOf="@id/factory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:text="@string/custom"
+            android:textSize="@dimen/text_size_12"
+            android:textColor="@color/white"
+            android:layout_centerVertical="true"
+            android:background="@drawable/btn_iv_selector"
+            android:clickable="true"
+            />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/led1_icon"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="3dp"
+                android:padding="5dp"
+                android:src="@mipmap/led"
+                />
+
+            <com.tfxiaozi.smartfishtank.widget.HorizontalProgressBarWithNumber
+                android:id="@+id/id_progressbar01"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:progress="10"
+                android:layout_marginLeft="-8dp"
+                android:layout_toRightOf="@id/led1_icon"
+                android:layout_centerVertical="true"
+                app:progress_reached_bar_height="5dp"
+                />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/led2_icon"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="3dp"
+                android:padding="5dp"
+                android:src="@mipmap/led"
+                />
+
+            <com.tfxiaozi.smartfishtank.widget.HorizontalProgressBarWithNumber
+                android:id="@+id/id_progressbar02"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:progress="40"
+                android:layout_marginLeft="-8dp"
+                android:layout_toRightOf="@id/led2_icon"
+                android:layout_centerVertical="true"
+                app:progress_reached_bar_height="5dp"
+                app:progress_reached_color="@color/colorPrimaryDark"
+                app:progress_text_color="@color/colorPrimaryDark"
+                />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/led3_icon"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="3dp"
+                android:padding="5dp"
+                android:src="@mipmap/led"
+                />
+
+            <com.tfxiaozi.smartfishtank.widget.HorizontalProgressBarWithNumber
+                android:id="@+id/id_progressbar03"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:progress="70"
+                android:layout_marginLeft="-8dp"
+                android:layout_toRightOf="@id/led3_icon"
+                android:layout_centerVertical="true"
+                app:progress_reached_bar_height="5dp"
+                app:progress_reached_color="@color/red"
+                app:progress_text_color="@color/red"
+                />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/led4_icon"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="3dp"
+                android:padding="5dp"
+                android:src="@mipmap/led"
+                />
+
+            <com.tfxiaozi.smartfishtank.widget.HorizontalProgressBarWithNumber
+                android:id="@+id/id_progressbar04"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:progress="90"
+                android:layout_marginLeft="-8dp"
+                android:layout_toRightOf="@id/led4_icon"
+                android:layout_centerVertical="true"
+                app:progress_reached_bar_height="5dp"
+                app:progress_reached_color="@color/titleBarBg"
+                app:progress_text_color="@color/titleBarBg"
+                />
+        </RelativeLayout>
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.2dp"
+        android:background="@color/line_color"
+        android:layout_margin="2dp"
+        />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="当前模式设置一览"
+            android:layout_centerInParent="true"
+            />
+
+    </RelativeLayout>
+
+
+</LinearLayout>

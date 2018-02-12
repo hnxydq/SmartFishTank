@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CircleImageView">
+        <attr name="border_width" format="dimension" />
+        <attr name="border_color" format="color" />
+        <attr name="border_overlay" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="LabelLayout">
+        <attr name="layout_icon" format="reference"/>
+        <attr name="layout_title" format="string"/>
+        <attr name="layout_subTitle" format="string"/>
+        <attr name="devider_line_color" format="color"/>
+    </declare-styleable>
+
+    <declare-styleable name="HorizontalProgressBarWithNumber">
+        <attr name="progress_unreached_color" format="color" />
+        <attr name="progress_reached_color" format="color" />
+        <attr name="progress_reached_bar_height" format="dimension" />
+        <attr name="progress_unreached_bar_height" format="dimension" />
+        <attr name="progress_text_size" format="dimension" />
+        <attr name="progress_text_color" format="color" />
+        <attr name="progress_text_offset" format="dimension" />
+        <attr name="progress_text_visibility" format="enum">
+            <enum name="visible" value="0" />
+            <enum name="invisible" value="1" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="PowerIndicator">
+        <attr name="indicator_width" format="dimension"/>
+        <attr name="indicator_height" format="dimension"/>
+        <attr name="indicator_border_color" format="color"/>
+        <attr name="indicator_content_color" format="color"/>
+        <attr name="indicator_text_color" format="color"/>
+    </declare-styleable>
+
+    <declare-styleable name="PowerFreqencyView">
+        <attr name="pfv_border_color" format="color"/>
+        <attr name="pfv_content_color" format="color"/>
+    </declare-styleable>
+</resources>

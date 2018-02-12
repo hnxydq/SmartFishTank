@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+
+    <include layout="@layout/bar_simple_title"/>
+
+    <com.tfxiaozi.smartfishtank.widget.LabelLayout
+        android:id="@+id/ll_mode_baozao"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_icon="@mipmap/ic_store"
+        app:layout_title="@string/mode_baozao"
+        app:devider_line_color="@color/line_color"
+        android:visibility="visible"
+        android:layout_marginTop="3dp"
+        />
+    <com.tfxiaozi.smartfishtank.widget.LabelLayout
+        android:id="@+id/ll_mode_sps"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_icon="@mipmap/ic_cloud"
+        app:layout_title="@string/mode_sps"
+        app:devider_line_color="@color/line_color"
+        android:visibility="visible"
+        android:layout_marginTop="3dp"
+        />
+    <com.tfxiaozi.smartfishtank.widget.LabelLayout
+        android:id="@+id/ll_mode_lps"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_icon="@mipmap/ic_about"
+        app:layout_title="@string/mode_lps"
+        app:devider_line_color="@color/line_color"
+        android:visibility="visible"
+        android:layout_marginTop="3dp"
+        />
+    <com.tfxiaozi.smartfishtank.widget.LabelLayout
+        android:id="@+id/ll_mode_nps"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_icon="@mipmap/ic_faq_feedback"
+        app:layout_title="@string/mode_nps"
+        app:devider_line_color="@color/line_color"
+        android:visibility="visible"
+        android:layout_marginTop="3dp"
+        />
+    <com.tfxiaozi.smartfishtank.widget.LabelLayout
+        android:id="@+id/ll_mode_user"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_icon="@mipmap/ic_cloud"
+        app:layout_title="@string/mode_user"
+        app:devider_line_color="@color/line_color"
+        android:visibility="visible"
+        android:layout_marginTop="3dp"
+        />
+
+</LinearLayout>

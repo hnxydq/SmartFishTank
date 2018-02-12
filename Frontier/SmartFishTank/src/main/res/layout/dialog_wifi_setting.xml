@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+    >
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="38dp"
+        android:text="@string/configwifi"
+        android:textSize="20sp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:background="@color/titleBarBg"
+        />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        >
+
+        <EditText
+            android:id="@+id/wifi_ssid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/ssid"
+            android:textColorHint="#BABABA"
+            android:textSize="@dimen/edit_text_size"
+            android:padding="10dp"
+            android:drawablePadding="5dp"
+            android:singleLine="true"
+            android:maxLines="1"
+            android:drawableLeft="@mipmap/ic_nickname"
+            />
+
+        <ImageView
+            android:id="@+id/wifi_clear_ssid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_clear"
+            android:clickable="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:layout_centerVertical="true"
+            android:visibility="invisible"
+            />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        >
+
+        <EditText
+            android:id="@+id/wifi_et_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/password"
+            android:textColorHint="#BABABA"
+            android:textSize="@dimen/edit_text_size"
+            android:padding="10dp"
+            android:drawablePadding="5dp"
+            android:maxLines="1"
+            android:drawableLeft="@mipmap/ic_password"
+            android:inputType="textPassword"
+            />
+
+        <ImageView
+            android:id="@+id/wifi_clear_password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_clear"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="40dp"
+            android:layout_centerVertical="true"
+            android:visibility="invisible"
+            android:clickable="true"
+            />
+
+        <ImageView
+            android:id="@+id/wifi_eye_on"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:visibility="invisible"
+            android:clickable="true"
+            android:background="@mipmap/ic_eye_on" />
+
+        <ImageView
+            android:id="@+id/wifi_eye_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@mipmap/ic_eye_close"
+            android:clickable="true"
+            android:visibility="visible" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="15dp"
+        android:gravity="center"
+        >
+
+        <Button
+            android:id="@+id/btn_cancel_wifi_config"
+            android:layout_width="wrap_content"
+            android:layout_height="38dp"
+            android:text="@string/cancel"
+            android:textSize="12sp"
+            android:textColor="@color/white"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:background="@drawable/btn_login_selector"/>
+
+        <Button
+            android:id="@+id/btn_confirm_wifi_config"
+            android:layout_toRightOf="@id/btn_cancel_wifi_config"
+            android:layout_width="wrap_content"
+            android:layout_height="38dp"
+            android:text="@string/confirm"
+            android:textSize="12sp"
+            android:textColor="@color/white"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:background="@drawable/btn_login_selector"/>
+    </RelativeLayout>
+</LinearLayout>

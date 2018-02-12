@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="#E8E8E8"
+
+    >
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="38dp"
+        android:text="@string/setting_time"
+        android:textSize="20sp"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/magin_10dp"
+        android:layout_gravity="center"
+        android:textColor="@color/white"
+        android:background="@color/titleBarBg"
+        />
+    <TimePicker
+        android:id="@+id/time_picker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="5dip" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
+        android:gravity="center"
+        >
+
+        <Button
+            android:id="@+id/btn_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="38dp"
+            android:text="@string/cancel"
+            android:textSize="12sp"
+            android:textColor="@color/white"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:background="@drawable/btn_login_selector"/>
+
+        <Button
+            android:id="@+id/btn_confirm"
+            android:layout_toRightOf="@id/btn_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="38dp"
+            android:text="@string/confirm"
+            android:textSize="12sp"
+            android:textColor="@color/white"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:background="@drawable/btn_login_selector"/>
+    </RelativeLayout>
+</LinearLayout>

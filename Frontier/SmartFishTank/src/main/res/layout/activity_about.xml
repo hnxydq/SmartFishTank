@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include android:id="@+id/title_bar" layout="@layout/bar_simple_title"/>
+
+    <LinearLayout
+        android:id="@+id/main_layout"
+        android:layout_below="@id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_launcher"
+            />
+
+        <TextView
+            android:id="@+id/about_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="@string/smart_control_terminal"
+            android:textSize="14sp"
+            android:textColor="@color/label_title_color"
+            />
+
+        <TextView
+            android:id="@+id/app_version"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="45dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="@string/version_code"
+            android:textSize="12sp"
+            android:textColor="@color/label_subtitle_color"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:background="@color/line_color"
+            />
+
+        <com.tfxiaozi.smartfishtank.widget.LabelLayout
+            android:id="@+id/llFunction"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            app:layout_title="@string/function_intro"
+            />
+        <com.tfxiaozi.smartfishtank.widget.LabelLayout
+            android:id="@+id/llSNS"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            app:layout_title="@string/friend_recommend"
+            />
+        <com.tfxiaozi.smartfishtank.widget.LabelLayout
+            android:id="@+id/llCheckNewVersion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            app:layout_title="@string/check_new_version"
+            />
+
+    </LinearLayout>
+    <Button
+        android:id="@+id/btn_logout"
+        android:layout_below="@id/main_layout"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:text="@string/logout_btn"
+        android:textSize="@dimen/edit_text_size"
+        android:textColor="@color/white"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:background="@drawable/btn_logout_selector"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="25dp"
+        >
+
+        <TextView
+            android:id="@+id/tv_user_protocol"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="@string/user_protocol"
+            android:textColor="#049C8D"
+            android:textSize="14sp"
+            />
+
+        <TextView
+            android:id="@+id/tv_user_policy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="@string/private_policy"
+            android:textColor="#049C8D"
+            android:textSize="14sp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="@string/copyright"
+            android:textColor="@color/label_subtitle_color"
+            android:textSize="10sp"
+            android:gravity="center"
+            />
+    </LinearLayout>
+</RelativeLayout>

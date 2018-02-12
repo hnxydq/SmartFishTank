@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="45dp"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/time_tv"
+            android:layout_width="70dp"
+            android:layout_height="match_parent"
+            android:textSize="@dimen/text_size_12"
+            android:gravity="center"
+            android:text="20:01" />
+
+        <com.tfxiaozi.smartfishtank.widget.EditText_
+            android:id="@+id/et1"
+            style="@style/timming_item_et" />
+
+        <com.tfxiaozi.smartfishtank.widget.EditText_
+            android:id="@+id/et2"
+            style="@style/timming_item_et" />
+
+        <com.tfxiaozi.smartfishtank.widget.EditText_
+            android:id="@+id/et3"
+            style="@style/timming_item_et" />
+
+        <com.tfxiaozi.smartfishtank.widget.EditText_
+            android:id="@+id/et4"
+            style="@style/timming_item_et" />
+
+        <com.tfxiaozi.smartfishtank.widget.EditText_
+            android:id="@+id/et5"
+            style="@style/timming_item_et" />
+
+        <com.tfxiaozi.smartfishtank.widget.EditText_
+            android:id="@+id/et6"
+            style="@style/timming_item_et" />
+
+        <com.tfxiaozi.smartfishtank.widget.EditText_
+            android:id="@+id/et7"
+            style="@style/timming_item_et" />
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/delete_btn"
+        android:layout_width="100dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:background="@color/colorAccent"
+        android:gravity="center"
+        android:text="@string/delete"
+        android:textColor="@color/white"
+        android:visibility="gone" />
+</RelativeLayout>

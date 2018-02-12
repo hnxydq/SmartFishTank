@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <include layout="@layout/bar_simple_title" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+        <com.tfxiaozi.smartfishtank.widget.LabelLayout
+            android:id="@+id/ll_auto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_icon="@mipmap/ic_cloud"
+            app:layout_title="@string/setting_auto"
+            app:devider_line_color="@color/line_color"
+            android:visibility="visible"
+            />
+        <com.tfxiaozi.smartfishtank.widget.LabelLayout
+            android:id="@+id/ll_manual"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_icon="@mipmap/ic_cloud"
+            app:layout_title="@string/setting_manual"
+            app:devider_line_color="@color/line_color"
+            android:visibility="visible"
+            />
+        <com.tfxiaozi.smartfishtank.widget.LabelLayout
+            android:id="@+id/ll_thunderlight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_icon="@mipmap/ic_cloud"
+            app:layout_title="@string/setting_thunderlight"
+            app:devider_line_color="@color/line_color"
+            android:visibility="visible"
+            />
+        <com.tfxiaozi.smartfishtank.widget.LabelLayout
+            android:id="@+id/ll_cloud"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_icon="@mipmap/ic_cloud"
+            app:layout_title="@string/setting_cloudy"
+            app:devider_line_color="@color/line_color"
+            android:visibility="visible"
+            />
+        <com.tfxiaozi.smartfishtank.widget.LabelLayout
+            android:id="@+id/ll_timer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_icon="@mipmap/ic_cloud"
+            app:layout_title="@string/setting_timer"
+            app:devider_line_color="@color/line_color"
+            android:visibility="visible"
+            />
+        <com.tfxiaozi.smartfishtank.widget.LabelLayout
+            android:id="@+id/ll_night_mode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_icon="@mipmap/ic_cloud"
+            app:layout_title="@string/setting_night_mode"
+            app:devider_line_color="@color/line_color"
+            android:visibility="visible"
+            />
+        <com.tfxiaozi.smartfishtank.widget.LabelLayout
+            android:id="@+id/ll_video_wave"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_icon="@mipmap/ic_cloud"
+            app:layout_title="@string/setting_video_wave"
+            app:devider_line_color="@color/line_color"
+            android:visibility="visible"
+            />
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

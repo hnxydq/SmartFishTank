@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/bgColor"
+    >
+    <include layout="@layout/bar_simple_title" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:gravity="center"
+        >
+
+        <RelativeLayout
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginRight="35dp"
+            >
+            <TextView
+                android:id="@+id/tv_inner_temper"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/inner_temperature"
+                android:layout_centerHorizontal="true"
+                />
+
+            <com.tfxiaozi.smartfishtank.widget.VerticalColorSeekBar
+                android:id="@+id/vpb_inner_temper"
+                android:layout_width="20dp"
+                android:layout_height="300dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="30dp"/>
+
+            <TextView
+                android:id="@+id/tv_current_temper"
+                android:layout_below="@id/vpb_inner_temper"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/current_temperature"
+                />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_marginLeft="35dp"
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            >
+            <TextView
+                android:id="@+id/tv_brightness"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/brightness"
+                android:layout_centerHorizontal="true"
+                />
+
+            <com.tfxiaozi.smartfishtank.widget.VerticalColorSeekBar
+                android:id="@+id/vpb_brightness"
+                android:layout_width="20dp"
+                android:layout_height="300dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="30dp"/>
+
+            <TextView
+                android:id="@+id/tv_current_brightness"
+                android:layout_below="@id/vpb_brightness"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="0"
+                />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

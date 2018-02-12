@@ -1,0 +1,106 @@
+apply plugin: 'com.android.application'
+apply plugin: 'org.greenrobot.greendao'
+
+repositories {
+    flatDir {
+        dirs 'libs'
+    }
+}
+
+android {
+    compileSdkVersion 24
+    buildToolsVersion "24.0.2"
+
+    defaultConfig {
+        applicationId "com.tfxiaozi.smartfishtank"
+        minSdkVersion 15
+        targetSdkVersion 24
+        versionCode 1
+        versionName "1.0.0.0_20160913"
+        /*ndk {
+            moduleName "mosquitto"
+            ldLibs "log", "z", "s"
+            abiFilters "armabi", "armabi-v7a", "arm64-v8a", "mips", "x86", "x86_64"
+        }*/
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    splits {
+        abi {
+            enable true
+            reset()
+            include 'armeabi-v7a', 'arm64-v8a', 'mips', 'x86', 'x86_64'
+            //universalApk true
+        }
+    }
+
+    greendao {
+        schemaVersion 1
+        targetGenDir 'src/main/java'
+    }
+
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+
+}
+
+// map for the version code
+ext.versionCodes = ['armeabi-v7a': 2, 'arm64-v8a': 3, 'mips': 4, 'x86': 6, 'x86_64': 7]
+
+android.applicationVariants.all { variant ->
+    // assign different version code for each output
+    variant.outputs.each { output ->
+        output.versionCodeOverride =
+                project.ext.versionCodes.
+                        get(output.getFilter(com.android.build.OutputFile.ABI), 9) * 100000 +
+                        android.defaultConfig.versionCode
+        println("Using version name: $output.versionCodeOverride")
+    }
+    // assign different version name for each output
+    variant.outputs.each { output ->
+        def suffix = "_universal"
+        if (output.getFilter(com.android.build.OutputFile.ABI) != null) {
+            suffix = "_" + output.getFilter(com.android.build.OutputFile.ABI)
+        }
+        output.versionNameOverride = android.defaultConfig.versionName + suffix
+    }
+}
+
+//add for jni begin
+//task nativeLibsToJar(type: Zip, description: "create a jar archive of the native libs") {
+//    destinationDir file("$projectDir/libs")
+//    baseName "libmosquittojni"
+//    extension "jar"
+//    from fileTree(dir: "libs", include: "**/libmosquitto.so")
+//    into "lib"
+//}
+
+//tasks.withType(JavaCompile) {
+//    compileTask -> compileTask.dependsOn(nativeLibsToJar)
+//}
+//add for jni end
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:24.2.1'
+    compile 'com.android.support:design:24.2.1'
+    compile 'de.mrmaffen:vlc-android-sdk:1.9.8'
+    compile 'com.google.code.gson:gson:2.7'
+    compile 'org.greenrobot:greendao:3.2.0'
+    compile 'com.jjoe64:graphview:4.2.1'
+    compile 'com.facebook.fresco:fresco:0.14.1'
+    compile 'com.facebook.fresco:animated-gif:0.14.1'
+    compile 'com.facebook.fresco:animated-base-support:0.14.1'
+    compile files('libs/BaiduLBS_Android.jar')
+    compile 'eu.the4thfloor.volley:com.android.volley:2015.05.28'
+    compile 'org.jsoup:jsoup:1.10.1'
+}
